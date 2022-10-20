@@ -9,7 +9,15 @@ async function success(pos) {
 
     document.getElementById("plaatsTekst").innerText = huidigWeer.name
     document.getElementById("temperatuur").innerText = huidigWeer.main.temp
+
+    if (huidigWeer.main.temp >= 15) {
+        document.getElementById("trui").innerText = "Koop een tshirt"
+    }else{
+        document.getElementById("trui").innerText = "Koop een trui"
+    }
 }
+
+
   
 function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
