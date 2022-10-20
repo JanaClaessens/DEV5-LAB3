@@ -1,5 +1,6 @@
 import './style.css'
 import Weather from './lib/weather.js'
+import Location from './lib/location.js'
 
 async function success(pos) {
     const coordinaten = pos.coords;
@@ -15,10 +16,14 @@ async function success(pos) {
     }else{
         document.getElementById("trui").innerText = "Koop een trui"
     }
+
+    let location = new Location()
+    let locationData = await location.get(coordinaten.latitude, coordinaten.longitude)
+
+    document.getElementById("location").innerText = "De dichtsbij zijnde as Adventure ligt op " + locationData.rows[0].elements[0].distance.text
 }
 
 
-  
 function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
 }
