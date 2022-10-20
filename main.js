@@ -18,9 +18,9 @@ async function success(pos) {
     }
 
     let location = new Location()
-    let locationData = await location.get(coordinaten.latitude, coordinaten.longitude)
+    let {rows} = await location.get(coordinaten.latitude, coordinaten.longitude)
 
-    document.getElementById("location").innerText = "De dichtsbij zijnde as Adventure ligt op " + locationData.rows[0].elements[0].distance.text
+    document.getElementById("location").innerText = "De dichtsbij zijnde as Adventure ligt op " + rows[0].elements[0].distance.text
 }
 
 
