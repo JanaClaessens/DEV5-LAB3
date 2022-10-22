@@ -1,5 +1,27 @@
 #app {
   width: 336px;
   height: 280px;
-  background-color: red;
+  background-color: #e87052;
+  padding: 10px;
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  color: white;
+  background-color: #5F696B;
+  border: 3px solid white; 
 }

@@ -2,21 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/afbeeldingen/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AS Adventure Advertisement</title>
   </head>
   <body>
     <div id="app">
-      <h1>AS Adventure</h1>
+      <img class="logo" src="/afbeeldingen/logo.png" alt="">
+
       <p>
         <span>In</span>
-        <span id="plaatsTekst"></span>
+        <span style="font-weight: bold;" id="plaatsTekst"></span>
         <span>is het</span>
-        <span id="temperatuur"></span>
+        <span style="font-weight: bold;" id="temperatuur"></span>
         <span>°C</span>
       </p>
-      <p id="trui"></p>
+      <button class="btn">
+        <p id="trui"></p>
+      </button>
       <p id="location"></p>
     </div>
     <script type="module" src="/main.js"></script>
